@@ -104,32 +104,3 @@ stock/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!
