@@ -44,7 +44,7 @@ server.port=8080
 ```
 
 4. **`StockTrackingApplication.java`** dosyasına sağ tıklayın → **Run**
-5. ✅ Backend çalıştı: **http://localhost:8080**
+5. ✅ Backend çalıştır
 
 ### 3️⃣ Frontend (VSCode)
 
@@ -85,9 +85,51 @@ stock/
     └── application.properties
 ```
 
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 
-**Zeynep Topçu** - [@zeyneptopcu06](https://github.com/zeyneptopcu06)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!
