@@ -1,102 +1,112 @@
 # 📦 Stok Takip Sistemi
 
-İşletmelerin ürün stoklarını, depolarını ve stok hareketlerini takip etmesini sağlayan fullstack web uygulaması.
+Bu proje, ürün, depo ve stok hareketlerinin yönetilebildiği full-stack bir stok takip uygulamasıdır. Uygulama **Next.js**, **React**, **Java Spring Boot** ve **PostgreSQL** kullanılarak geliştirilmiştir.
 
-## 🎯 Proje Amacı
+## 📌 Proje Hakkında
 
-Bu proje, stok yönetimini kolaylaştırmak için geliştirilmiştir:
-- ✅ Ürün ve depo stok CRUD işlemleri
-- ✅ Stok giriş/çıkış kayıtları
-- ✅ Anlık stok durum takibi
-- ✅ Kullanıcı kimlik doğrulama
+Stok Takip Sistemi; işletmelerin ürünlerini, depolarını ve stok giriş/çıkış hareketlerini daha düzenli şekilde takip edebilmesi amacıyla geliştirilmiştir.
 
----
+Uygulamada ürün yönetimi, depo yönetimi, stok hareketleri, mevcut stok durumu ve kullanıcı giriş/kayıt işlemleri bulunmaktadır.
 
-## 🛠️ Teknolojiler
+Bu proje ile frontend ve backend yapısının birlikte çalışması, REST API entegrasyonu, veritabanı yönetimi ve kullanıcı odaklı arayüz geliştirme konularında pratik yapılmıştır.
 
-**Frontend:** Next.js 14, React, Tailwind CSS  
-**Backend:** Spring Boot, PostgreSQL  
-**IDE:** IntelliJ IDEA (Backend), VSCode (Frontend)
+## ✨ Özellikler
 
----
+- Kullanıcı kayıt ve giriş işlemleri
+- Ürün ekleme, listeleme, güncelleme ve silme
+- Depo ekleme, listeleme, güncelleme ve silme
+- Stok giriş ve stok çıkış işlemleri
+- Mevcut stok durumunu görüntüleme
+- Minimum ve maksimum stok limitleri ile kontrol
+- Backend ve frontend arasında REST API entegrasyonu
+- PostgreSQL veritabanı kullanımı
+- Modern ve kullanımı kolay web arayüzü
+
+## 🛠️ Kullanılan Teknolojiler
+
+**Frontend:** Next.js, React, JavaScript  
+**Backend:** Java, Spring Boot  
+**Veritabanı:** PostgreSQL  
+**API Test:** Postman  
+**Araçlar:** Git, GitHub, IntelliJ IDEA, VS Code
+
+## 📁 Proje Yapısı
+
+- `aa/`: Frontend tarafı
+- `backend/stockTracking/`: Backend tarafı
+- `app/`: Next.js sayfa ve bileşen yapısı
+- `components/`: React bileşenleri
+- `src/main/java/`: Java backend kaynak kodları
+- `application.properties`: Backend yapılandırma dosyası
+- `pom.xml`: Spring Boot bağımlılıkları
+- `package.json`: Frontend bağımlılıkları ve komutları
 
 ## 🚀 Kurulum ve Çalıştırma
 
-### 1️⃣ PostgreSQL Veritabanı Kurulumu
+PostgreSQL üzerinde veritabanı oluşturun:
 
-```sql
--- PostgreSQL'e bağlanın (psql -U postgres)
-CREATE DATABASE stock_tracking;
-```
+`CREATE DATABASE stock_tracking;`
 
-### 2️⃣ Backend (IntelliJ IDEA)
+Backend için `application.properties` dosyasındaki veritabanı bilgilerini kendi bilgisayarınıza göre düzenleyin:
 
-1. **IntelliJ IDEA'yı açın**
-2. **File → Open → `backend/stockTracking`** klasörünü seçin
-3. **`src/main/resources/application.properties`** dosyasını düzenleyin:
+`spring.datasource.url=jdbc:postgresql://localhost:5432/stock_tracking`
 
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/stock_tracking
-spring.datasource.username=postgres
-spring.datasource.password=POSTGRESQL_SIFRENIZ
-spring.jpa.hibernate.ddl-auto=update
-server.port=8080
-```
+`spring.datasource.username=postgres`
 
-4. **`StockTrackingApplication.java`** dosyasına sağ tıklayın → **Run**
-5. ✅ Backend çalıştır
+`spring.datasource.password=POSTGRESQL_SIFRENIZ`
 
-### 3️⃣ Frontend (VSCode)
+Backend projesini IntelliJ IDEA ile açıp Spring Boot uygulamasını çalıştırın.
 
-```bash
-# Frontend klasörüne gidin
-cd aa
+Frontend klasörüne girin:
 
-# Bağımlılıkları yükleyin
-npm install
+`cd aa`
 
-# Uygulamayı başlatın
-npm run dev
-```
+Bağımlılıkları yükleyin:
 
-✅ Frontend çalıştı: **http://localhost:3000**
+`npm install`
 
----
+Frontend uygulamasını başlatın:
+
+`npm run dev`
+
+Frontend çalıştıktan sonra tarayıcıdan şu adrese gidin:
+
+`http://localhost:3000`
+
+Backend varsayılan olarak şu adreste çalışır:
+
+`http://localhost:8080`
 
 ## 💻 Kullanım
 
-1. Tarayıcıda **http://localhost:3000** adresine gidin
-2. Kayıt olun ve giriş yapın
-3. Sol menüden **Depo**, **Ürün**, **Stok Hareketi** ve **Stok Durum** sayfalarını kullanın
+1. Uygulamaya kayıt olun veya giriş yapın.
+2. Ürün bilgilerini ekleyin ve yönetin.
+3. Depo bilgilerini ekleyin ve yönetin.
+4. Stok giriş ve stok çıkış hareketlerini kaydedin.
+5. Mevcut stok durumunu takip edin.
+
+## 📚 Bu Projede Kazanılan Deneyimler
+
+Bu proje ile şu konularda pratik yapılmıştır:
+
+- Next.js ve React ile frontend geliştirme
+- Java Spring Boot ile backend geliştirme
+- REST API yapısı oluşturma
+- Frontend ve backend entegrasyonu
+- PostgreSQL ile ilişkisel veritabanı kullanımı
+- CRUD işlemleri geliştirme
+- Kullanıcı giriş/kayıt süreçleri
+- Postman ile API test etme
+- GitHub üzerinde proje paylaşma
 
 ---
 
-## 📝 Proje Yapısı
-
-```
-stock/
-├── aa/                      # Frontend (Next.js)
-│   ├── app/components/      # React bileşenleri
-│   └── package.json
-│
-└── backend/stockTracking/   # Backend (Spring Boot)
-    ├── src/main/java/
-    ├── pom.xml
-    └── application.properties
-```
+Bu proje, full-stack web geliştirme becerilerini göstermek amacıyla hazırlanmış stok takip uygulamasıdır.
 
 
 
 
 
-
-
-
-
-
-
-
----
 
 
 
